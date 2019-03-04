@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="new_word" placeholder="nhap tu muon tra">
+<input type="button" value="tim kiem" onclick="tra()">
+<p id="rs"></p>
+<script>
+    function tra() {
+        let new_word = document.getElementById('new_word').value;
+        let Eng = ["flower", "house", "computer", "phone", "glasses","bottle","pen","notebook"];
+        let Vie = ["hoa", "ngôi nhà", "máy tính","điện thoại", "kính mắt","chai,lọ","bút bi","quyển vở"];
+        let index = 0;
+        for (let i = 0; i < Eng.length; i++) {
+            if (new_word === Eng[i]) {
+                index = i;
+            }
+        }
+        document.getElementById("rs").innerHTML = Vie[index];
+    }
+</script>
+</body>
+</html>
